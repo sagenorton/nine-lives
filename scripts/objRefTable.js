@@ -9,9 +9,15 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Keyboard,
 		C3.Behaviors.Sin,
 		C3.Plugins.Text,
+		C3.Plugins.Button,
 		C3.Plugins.System.Cnds.EveryTick,
 		C3.Plugins.Sprite.Acts.SetPosToObject,
 		C3.Plugins.Text.Acts.SetText,
+		C3.Plugins.Button.Cnds.OnClicked,
+		C3.Plugins.System.Acts.GoToLayout,
+		C3.Plugins.System.Cnds.OnLayoutStart,
+		C3.Behaviors.Platform.Acts.SetEnabled,
+		C3.Plugins.System.Acts.SetTimescale,
 		C3.Plugins.System.Cnds.IsGroupActive,
 		C3.Plugins.System.Cnds.CompareVar,
 		C3.Plugins.Sprite.Acts.SetAnimFrame,
@@ -37,7 +43,12 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.System.Acts.SetLayerVisible,
 		C3.Behaviors.Platform.Acts.SimulateControl,
 		C3.Plugins.Sprite.Acts.SetInstanceVar,
-		C3.Plugins.System.Acts.AddVar
+		C3.Plugins.System.Acts.AddVar,
+		C3.Plugins.System.Cnds.Compare,
+		C3.Plugins.System.Acts.SetVar,
+		C3.Plugins.System.Acts.RestartLayout,
+		C3.Plugins.System.Acts.ResetGlobals,
+		C3.Plugins.System.Cnds.LayerVisible
 	];
 };
 self.C3_JsPropNameTable = [
@@ -61,6 +72,16 @@ self.C3_JsPropNameTable = [
 	{Background1: 0},
 	{Background2: 0},
 	{Background3: 0},
+	{Overlay: 0},
+	{TryAgainButton: 0},
+	{Title: 0},
+	{Instructions: 0},
+	{StartButton: 0},
+	{Background4: 0},
+	{Background5: 0},
+	{Background6: 0},
+	{Overlay2: 0},
+	{Tilemap2: 0},
 	{Score: 0}
 ];
 
@@ -78,5 +99,15 @@ self.InstanceType = {
 	GameOverBackground: class extends self.ISpriteInstance {},
 	Background1: class extends self.ISpriteInstance {},
 	Background2: class extends self.ISpriteInstance {},
-	Background3: class extends self.ISpriteInstance {}
+	Background3: class extends self.ISpriteInstance {},
+	Overlay: class extends self.ISpriteInstance {},
+	TryAgainButton: class extends self.IButtonInstance {},
+	Title: class extends self.ITextInstance {},
+	Instructions: class extends self.ITextInstance {},
+	StartButton: class extends self.IButtonInstance {},
+	Background4: class extends self.ISpriteInstance {},
+	Background5: class extends self.ISpriteInstance {},
+	Background6: class extends self.ISpriteInstance {},
+	Overlay2: class extends self.ISpriteInstance {},
+	Tilemap2: class extends self.ITilemapInstance {}
 }
