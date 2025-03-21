@@ -4,6 +4,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Tilemap,
 		C3.Behaviors.solid,
 		C3.Plugins.Sprite,
+		C3.Behaviors.Flash,
 		C3.Behaviors.Platform,
 		C3.Behaviors.scrollto,
 		C3.Plugins.Keyboard,
@@ -20,6 +21,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.System.Acts.SetTimescale,
 		C3.Plugins.System.Cnds.IsGroupActive,
 		C3.Plugins.System.Cnds.CompareVar,
+		C3.Plugins.Sprite.Cnds.CompareInstanceVar,
 		C3.Plugins.Sprite.Acts.SetAnimFrame,
 		C3.Plugins.Keyboard.Cnds.OnKey,
 		C3.Plugins.Sprite.Acts.SetMirrored,
@@ -37,9 +39,9 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Sprite.Acts.Destroy,
 		C3.Behaviors.Platform.Acts.SetVectorY,
 		C3.Plugins.System.Cnds.Else,
+		C3.Behaviors.Flash.Acts.Flash,
 		C3.Plugins.Sprite.Acts.SubInstanceVar,
 		C3.Plugins.System.Acts.SubVar,
-		C3.Plugins.Sprite.Cnds.CompareInstanceVar,
 		C3.Plugins.System.Acts.SetLayerVisible,
 		C3.Behaviors.Platform.Acts.SimulateControl,
 		C3.Plugins.Sprite.Acts.SetInstanceVar,
@@ -48,6 +50,8 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.System.Acts.SetVar,
 		C3.Plugins.System.Acts.RestartLayout,
 		C3.Plugins.System.Acts.ResetGlobals,
+		C3.Plugins.System.Exps.layoutname,
+		C3.Plugins.System.Acts.Wait,
 		C3.Plugins.System.Cnds.LayerVisible
 	];
 };
@@ -55,6 +59,7 @@ self.C3_JsPropNameTable = [
 	{Solid: 0},
 	{Tilemap: 0},
 	{Health: 0},
+	{Flash: 0},
 	{PlayerAnim: 0},
 	{Platform: 0},
 	{ScrollTo: 0},
@@ -82,6 +87,15 @@ self.C3_JsPropNameTable = [
 	{Background6: 0},
 	{Overlay2: 0},
 	{Tilemap2: 0},
+	{Background7: 0},
+	{Background8: 0},
+	{Background9: 0},
+	{Tilemap3: 0},
+	{Celebration: 0},
+	{Mort: 0},
+	{Congratulations: 0},
+	{Text: 0},
+	{Button: 0},
 	{Score: 0}
 ];
 
@@ -109,5 +123,14 @@ self.InstanceType = {
 	Background5: class extends self.ISpriteInstance {},
 	Background6: class extends self.ISpriteInstance {},
 	Overlay2: class extends self.ISpriteInstance {},
-	Tilemap2: class extends self.ITilemapInstance {}
+	Tilemap2: class extends self.ITilemapInstance {},
+	Background7: class extends self.ISpriteInstance {},
+	Background8: class extends self.ISpriteInstance {},
+	Background9: class extends self.ISpriteInstance {},
+	Tilemap3: class extends self.ITilemapInstance {},
+	Celebration: class extends self.ISpriteInstance {},
+	Mort: class extends self.ISpriteInstance {},
+	Congratulations: class extends self.ITextInstance {},
+	Text: class extends self.ITextInstance {},
+	Button: class extends self.IButtonInstance {}
 }
